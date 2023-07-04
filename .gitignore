@@ -1,0 +1,17 @@
+# Dependency directories
+node_modules/
+
+# Yarn Integrity file
+.yarn-integrity
+*.log
+
+# dotenv environment variables file
+.env
+.env.test
+
+# Optional npm cache directory
+.npm
+
+# Ts output dirs
+build
+dist

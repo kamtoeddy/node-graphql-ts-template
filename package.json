@@ -1,0 +1,65 @@
+{
+  "_moduleAliases": {
+    "@": "dist"
+  },
+  "name": "node-template-express-ts",
+  "version": "0.0.1",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build": "rimraf ./build && tsc",
+    "check-deps": "depcheck .",
+    "dev": "nodemon",
+    "lint": "eslint ./src --ext .ts",
+    "start": "node dist",
+    "test": "tsc & jest --verbose --forceExit --detectOpenHandles --maxWorkers=1",
+    "test:coverage": "tsc & jest --coverage --forceExit --maxWorkers=1",
+    "test:ci": "tsc & jest --verbose --forceExit --maxWorkers=1",
+    "test:watch": "tsc & jest --verbose --watchAll --forceExit --detectOpenHandles --maxWorkers=1"
+  },
+  "dependencies": {
+    "@apollo/server": "^4.7.1",
+    "apitoolz": "^0.3.14",
+    "dotenv": "^16.0.3",
+    "graphql": "^16.7.1",
+    "graphql-type-json": "^0.3.2",
+    "module-alias": "^2.2.3",
+    "uniqid": "^5.4.0"
+  },
+  "devDependencies": {
+    "@types/jest": "^29.2.3",
+    "@types/node": "^20.3.3",
+    "@types/supertest": "^2.0.12",
+    "@types/uniqid": "^5.3.2",
+    "@typescript-eslint/eslint-plugin": "^5.60.1",
+    "@typescript-eslint/parser": "^5.60.1",
+    "depcheck": "^1.4.3",
+    "eslint": "5.16.0",
+    "jest": "^29.3.0",
+    "nodemon": "^2.0.20",
+    "rimraf": "^5.0.0",
+    "supertest": "^6.3.0",
+    "ts-jest": "^29.0.3",
+    "ts-node": "^10.9.1",
+    "typescript": "5.0.4"
+  },
+  "jest": {
+    "moduleNameMapper": {
+      "@/(.*)$": "<rootDir>/src/$1"
+    },
+    "preset": "ts-jest",
+    "testEnvironment": "node",
+    "testMatch": [
+      "**/tests/**/(*.)+(test).(ts|js)"
+    ],
+    "transform": {
+      "node_modules/variables/.+\\.(js|ts)$": "ts-jest"
+    },
+    "transformIgnorePatterns": [
+      "node_modules/(?!variables/.*)"
+    ]
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}

@@ -1,0 +1,1 @@
+export { parseAuth } from './auth'
