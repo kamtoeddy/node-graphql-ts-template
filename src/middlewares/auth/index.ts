@@ -1,8 +1,8 @@
-import type { IncomingMessage } from 'http'
+import type { IncomingMessage } from 'http';
 
-export { parseAuth }
+export { parseAuth };
 
 /* eslint-disable-next-line no-unused-vars */
 function parseAuth(req: IncomingMessage) {
-  return {}
+  return {};
 }

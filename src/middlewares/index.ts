@@ -1,1 +1,1 @@
-export { parseAuth } from './auth'
+export { parseAuth } from './auth';

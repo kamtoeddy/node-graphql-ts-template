@@ -1,11 +1,11 @@
-import GraphQLJSON, { GraphQLJSONObject } from 'graphql-type-json'
+import GraphQLJSON, { GraphQLJSONObject } from 'graphql-type-json';
 
-import { userResolvers } from '@/adapters/graphql/user'
+import { userResolvers } from '@/adapters/graphql/user';
 
-type SchemaNames = 'User'
+type SchemaNames = 'User';
 
 function resolveType(schemaName: SchemaNames) {
-  return (obj: any) => (obj.id ? schemaName : 'ErrorType')
+  return (obj: any) => (obj.id ? schemaName : 'ErrorType');
 }
 
 const typeDefs = `#graphql
@@ -49,7 +49,7 @@ const typeDefs = `#graphql
     data: UserDataType
     success: Boolean
   }
-`
+`;
 
 const resolvers = {
   Query: {
@@ -68,6 +68,6 @@ const resolvers = {
 
   JSON: GraphQLJSON,
   JSONObject: GraphQLJSONObject
-}
+};
 
-export { resolvers, typeDefs }
+export { resolvers, typeDefs };

@@ -1,1 +1,1 @@
-export * as UserService from './user'
+export * as UserService from './user';

@@ -1,6 +1,6 @@
-import uniqid from 'uniqid'
+import uniqid from 'uniqid';
 
-export { generateId }
+export { generateId };
 
 const generateId = (prefix?: string, suffix?: string) =>
-  uniqid.process(prefix, suffix).toUpperCase()
+  uniqid.process(prefix, suffix).toUpperCase();

@@ -1,1 +1,1 @@
-export { constants } from './contants'
+export { constants } from './contants';

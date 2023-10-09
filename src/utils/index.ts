@@ -1,1 +1,1 @@
-export { generateId } from './generate'
+export { generateId } from './generate';

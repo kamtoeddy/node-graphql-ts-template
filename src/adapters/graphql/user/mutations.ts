@@ -1,10 +1,10 @@
-import { UserService } from '../../../services'
-import { UserInput } from '../../../types'
+import { UserService } from '../../../services';
+import { UserInput } from '../../../types';
 
-export { mutations }
+export { mutations };
 
 const mutations = {
   addUser: async (_: any, args: Partial<UserInput>) => {
-    return UserService.addUser(args)
+    return UserService.addUser(args);
   }
-}
+};

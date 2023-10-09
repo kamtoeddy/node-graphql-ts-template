@@ -5,16 +5,18 @@
     "forceConsistentCasingInFileNames": true,
     "module": "commonjs",
     "moduleResolution": "node",
+    "resolveJsonModule": true,
     "strict": true,
     "target": "es2016",
     "outDir": "./dist",
     "removeComments": true,
     "skipLibCheck": true,
     "rootDir": "./src",
-    "types": ["jest", "node"],
+    "types": ["node"],
     "paths": {
-      "@/*": ["./src/*"]
-    }
+      "@/*": ["src/*"]
+    },
+    "typeRoots": ["./node_modules/@types"]
   },
   "include": ["src"],
   "exclude": ["coverage", "dist", "node_modules", "tests"]
